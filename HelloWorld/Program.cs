@@ -1,25 +1,20 @@
 ﻿using System;
+using HelloWorld.Math;
 
 namespace HelloWorld
 {
-	public class Person
+	class Program
 	{
-		public string Name;
-
-		public static string Status = "I am human";
-		public void Introduce() 
+		static void Main(string[] args)
 		{
-			Console.WriteLine("Hi, my name is " + Name);
-		}
+			var john = new Person();
+			john.FirstName = "Foos";
+			john.LastName = "Fez";
+			john.Introduce();
 
-		public static void Main() 
-		{
-			Person mina = new Person();
-			var minaC = new Person();
-			mina.Name = "Mina";
-			mina.Introduce();
-			Console.WriteLine(Person.Status);
-
+			Calculator calculator = new Calculator();
+			var result = calculator.Add(3, 4);
+			Console.WriteLine(result);
 		}
 	}
 }
