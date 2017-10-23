@@ -47,33 +47,9 @@ namespace HelloWorld
 			var tallAnimal = (Animal)Enum.Parse(typeof(Animal), longNeck);
 
 			NumberValidator someNumber = new NumberValidator();
-			Console.WriteLine("Please provide a number");
+			Console.WriteLine("Please provide a number within the range of 1 - 10: ");
 			int input = Int32.Parse(Console.ReadLine());
 			NumberValidator.isValid(input);
-		}
-		public enum Animal
-		{
-			Dog = 1,
-			Cat = 2,
-			Giraffe = 3,
-		}
-		public class NumberValidator
-		{
-			public static string Validity;
-			public static void isValid(int num)
-			{
-				
-				if (num >= 1 && num <= 10)
-				{
-					NumberValidator.Validity = "\nValid";
-				}
-				else 
-				{
-					NumberValidator.Validity = "\nInvalid";
-				}
-
-				Console.WriteLine(NumberValidator.Validity);	
-			}
 		}
 	}
 }

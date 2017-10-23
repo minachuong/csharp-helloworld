@@ -36,6 +36,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Math\Calculator.cs" />
+    <Compile Include="NumberValidator.cs" />
+    <Compile Include="Animal.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Math\" />
