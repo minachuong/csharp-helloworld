@@ -45,13 +45,35 @@ namespace HelloWorld
 			// converting string to enum
 			var longNeck = "Giraffe";
 			var tallAnimal = (Animal)Enum.Parse(typeof(Animal), longNeck);
+
+			NumberValidator someNumber = new NumberValidator();
+			Console.WriteLine("Please provide a number");
+			int input = Int32.Parse(Console.ReadLine());
+			NumberValidator.isValid(input);
 		}
-		public enum Animal : byte
+		public enum Animal
 		{
 			Dog = 1,
 			Cat = 2,
 			Giraffe = 3,
 		}
+		public class NumberValidator
+		{
+			public static string Validity;
+			public static void isValid(int num)
+			{
+				
+				if (num >= 1 && num <= 10)
+				{
+					NumberValidator.Validity = "\nValid";
+				}
+				else 
+				{
+					NumberValidator.Validity = "\nInvalid";
+				}
 
+				Console.WriteLine(NumberValidator.Validity);	
+			}
+		}
 	}
 }
